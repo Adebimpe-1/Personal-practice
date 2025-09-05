@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adventure Rafting Tours</title>
+    <meta name="description" content="Adebimpe's practice rafting website">
+    <meta name="author" content="Adebimpe Aderoju rafting website">
+    <link rel="stylesheet" href="practice_rafting.css" />
+    <script defer src="practice_rafting.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Adventure Rafting Tours</h1>
+    <nav>
+        <a href="#tours">Tours</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+    <div class="hero">
+        Experience the Thrill of Rapids with Us
+    </div>
+
+    <main>
+        <section id="tours">
+            <h2>Our Tours</h2>
+            <div class="tours">
+                <div class="tour-card">
+                    <img src= "images/rapid-whitewater-rafting.jpg"
+                        alt="Rapid Whitewater Rafting" />
+                    <h3>Rapid Whitewater Rafting</h3>
+                    <p>Exciting 3-hour rafting through class IV rapids. Suitable for intermediate adventurers.</p>
+                    <button data-tour="Rapid Whitewater Rafting">Book Now</button>
+                </div>
+                <div class="tour-card">
+                    <img src="images/family-river-tour.jpg"
+                        alt="Family River Tour" />
+                    <h3>Family River Tour</h3>
+                    <p>Enjoy a relaxing 2-hour rafting tour suitable for all ages and skill levels.</p>
+                    <button data-tour="Family River Tour">Book Now</button>
+                </div>
+                <div class="tour-card">
+                    <img src="images/sunset-rafting.jpg"
+                        alt="Sunset Rafting" />
+                    <h3>Sunset Rafting</h3>
+                    <p>Experience the beauty of the river at sunset with our guided evening tours.</p>
+                    <button data-tour="Sunset Rafting">Book Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Adventure Rafting Tours has been leading thrilling and safe rafting journeys for more than 15 years. Our
+                expert guides and premium equipment ensure a memorable experience for beginners and seasoned rafters
+                alike. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos repellendus vel animi, 
+                veritatis quia accusamus quaerat possimus cupiditate doloribus suscipit, delectus tempora porro quae 
+                placeat magnam eaque ipsum perspiciatis soluta nobis. Temporibus deleniti recusandae minima a numquam 
+                nostrum suscipit! Harum fugiat cumque dignissimos eius quod, fuga repellat libero velit earum.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label><br />
+                <input type="text" id="name" name="name" /><br />
+                <label for="email">Email:</label><br />
+                <input type="email" id="email" name="email" /><br />
+                <label for="message">Message:</label><br />
+                <textarea id="message" name="message" rows="4" style="width: 100%;"></textarea><br />
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            &copy; 2025 Adventure Rafting Tours. All rights reserved.
+            <p id="localDateTime" style="font-size: 1rem; margin-top: 5px;"></p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="hidden">
+        <div id="bookingModalContent">
+            <span id="closeModal">&times;</span>
+            <h3 id="bookingTourName"></h3>
+            <form id="bookingForm">
+                <input type="text" id="bookerName" placeholder="Your Name" required />
+                <input type="email" id="bookerEmail" placeholder="Your Email" required />
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
