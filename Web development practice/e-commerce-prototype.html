@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive E-Commerce Prototype</title>
+    <link rel="stylesheet" href="styles/e-commerce-prototype.css" />
+    <script defer src="scripts/e-commerce-prototype.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>ShopEase with Ade</h1>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#" tabindex="0">Home</a></li>
+                <li><a href="#" tabindex="0">Shop</a></li>
+                <li><a href="#" tabindex="0">About</a></li>
+                <li><a href="#" tabindex="0">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" role="button"
+                tabindex="0">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" role="banner">
+        <h2>Discover Your Next Favorite Product</h2>
+        <p>Explore our curated collection of quality items. Designed to delight on any device.</p>
+    </section>
+
+    <main>
+        <section class="product-grid" aria-label="Product listings">
+            <article class="product-card" tabindex="0" aria-describedby="desc1">
+                <img src="images/stylish-sneakers.jpeg"
+                    alt="Stylish sneakers" class="product-image" loading="lazy" />
+                <div class="product-info">
+                    <h3 class="product-title">Stylish Sneakers</h3>
+                    <p class="product-price">$79.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <p id="desc1" class="sr-only">Comfortable stylish sneakers perfect for everyday wear.</p>
+            </article>
+            <article class="product-card" tabindex="0" aria-describedby="desc2">
+                <img src="images/modern-wristwatch.jpeg"
+                    alt="Modern wristwatch" class="product-image" loading="lazy" />
+                <div class="product-info">
+                    <h3 class="product-title">Modern Wristwatch</h3>
+                    <p class="product-price">$149.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <p id="desc2" class="sr-only">Contemporary wristwatch with leather strap and sleek dial.</p>
+            </article>
+            <article class="product-card" tabindex="0" aria-describedby="desc3">
+                <img src="images/elegant-handbag.jpeg"
+                    alt="Elegant handbag" class="product-image" loading="lazy" />
+                <div class="product-info">
+                    <h3 class="product-title">Elegant Handbag</h3>
+                    <p class="product-price">$89.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <p id="desc3" class="sr-only">Elegant handbag crafted from premium materials for everyday luxury.</p>
+            </article>
+            <article class="product-card" tabindex="0" aria-describedby="desc4">
+                <img src="images/wireless-headphones.jpeg"
+                    alt="Wireless earbuds" class="product-image" loading="lazy" />
+                <div class="product-info">
+                    <h3 class="product-title">Wireless Earbuds</h3>
+                    <p class="product-price">$119.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <p id="desc4" class="sr-only">High quality wireless earbuds with noise cancellation.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 ShopEase. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

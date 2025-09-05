@@ -1,0 +1,263 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #ff6f61;
+    --text-color: #333;
+    --bg-color: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background: var(--bg-color);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    transition: color 0.3s ease;
+}
+
+nav li a:hover,
+nav li a:focus {
+    color: #fff9f7;
+    outline: none;
+}
+
+/* Menu toggle for mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+/* Animate toggle bars when active */
+.menu-toggle.active div:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active div:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        background: var(--primary-color);
+        flex-direction: column;
+        border-radius: 5px;
+        padding: 1rem 1.5rem;
+        box-shadow: 0 4px 12px var(--shadow-color);
+        min-width: 150px;
+    }
+
+    nav ul.show {
+        display: flex;
+        animation: fadeInDown 0.4s ease forwards;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: #f9f5f0;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    animation: fadeInUp 0.75s ease forwards;
+}
+
+.product-card:hover,
+.product-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px var(--shadow-color);
+    outline: none;
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover,
+.add-to-cart-btn:focus {
+    background-color: #d85c53;
+    outline: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    background: #f4f4f4;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: auto;
+}
+
+/* Visually hidden for accessibility descriptions */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
